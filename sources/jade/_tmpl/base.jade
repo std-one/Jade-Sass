@@ -1,0 +1,67 @@
+doctype html
+html(lang="ja")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1")
+		meta(name="format-detection" content="telephone=no")
+
+		block param
+		meta(name="Description" content=description)
+		meta(name="Keywords" content=keywords)
+		if pageTitle
+			title #{pageTitle} | #{siteTitle}
+		else
+			title #{siteTitle}
+		link(rel="stylesheet" href="/assets/css/style.css")
+
+		block style
+		script(src="//code.jquery.com/jquery-3.2.1.min.js")
+		script(src="/assets/js/script.js")
+
+		block javascript
+
+	body(id=bodyID)
+		header.header
+			.wrap
+				if pageTitle
+					p.header__logo HTML5サイト制作用雛形【ver. No.2017.03.06】
+				else
+					h1.header__logo HTML5サイト制作用雛形【ver. No.2017.03.06】
+
+				nav.nav-utility
+					ul
+						li: a(href="xxx") よくある質問
+						li: a(href="xxx") お問い合わせ
+						li: a(href="xxx") サイトマップ
+
+				nav.nav-global
+					ul
+						li: a(href="xxx") グローバルナビ
+						li: a(href="xxx") グローバルナビ
+						li: a(href="xxx") グローバルナビ
+						li: a(href="xxx") グローバルナビ
+						li: a(href="xxx") グローバルナビ
+
+		main.main(role="main")
+			block container
+				.container
+					.wrap
+						block main-contents
+							article.contents
+								block contents
+
+							.side
+								block side
+
+			p.pagetop.is-fixed: a(href="#") PAGETOP
+
+		footer.footer
+			.wrap
+				.nav-footer
+					ul
+						li: a(href="xxx") グローバルナビ
+						li: a(href="xxx") グローバルナビ
+						li: a(href="xxx") グローバルナビ
+						li: a(href="xxx") グローバルナビ
+
+			p.copyright: small Copyright (c) 2017 &nbsp;hogehoge All Rights Reserved.

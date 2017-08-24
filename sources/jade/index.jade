@@ -1,0 +1,26 @@
+extends _tmpl/base
+
+block param
+	- var siteTitle = "ダミータイトル";
+	- var description = "ダミータイトル";
+	- var keywords = "ダミータイトル";
+	- var bodyID = "BodyID";
+
+//- block javascript
+//- 	script.
+//- 		$(function(){
+//- 			$('.tab-info__nav a').off().on('click', function(e){
+//- 				e.preventDefault();
+//- 				var $self = $(this),
+//- 				    $panel = $($self.attr('href'));
+
+//- 					$('.tab-info__nav a').removeClass('is-active');
+//- 					$self.addClass('is-active');
+//- 					$panel.fadeIn().siblings().hide();
+//- 			});
+//- 		});
+
+
+prepend container
+
+block contents
